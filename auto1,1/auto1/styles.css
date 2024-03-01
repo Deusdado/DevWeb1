@@ -1,0 +1,56 @@
+title {
+    color: rgba(0, 30, 255, 0.315);
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+#tabImage {
+    width: 100%; /* Faz a imagem preencher a largura da tela */
+    max-height: 50%; /* Mantém a proporção da imagem */
+    object-fit: cover;
+}
+    
+.tabs {
+    background-color: #333;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 13px;
+}
+
+.tab-button {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.1s ease;
+}
+.tab-button:hover {
+    transform: scale(1.1);
+    background-color: rgba(0, 30, 255, 0.315);
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+input {
+    margin: 10px 0;
+    padding: 5px;
+    width: 200px;
+}
+textarea {
+    width: 80%; /* Ajuste a largura conforme necessário */
+    height: 80px; /* Ajuste a altura conforme necessário */
+    font-size: 1.2em; /* Ajuste o tamanho da fonte conforme necessário */
+}
