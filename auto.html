@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corretora de Seguros</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+</head>
+
+<body>
+
+    <div class="tabs">
+        <button class="tab-button" onclick="openTab('home')">Quem Somos</button>
+        <button class="tab-button" onclick="openTab('auto')">Seguro Auto</button>
+        <button class="tab-button" onclick="openTab('casa')">Seguro Residêncial</button>
+        <button class="tab-button" onclick="openTab('life')">Seguro de Vida</button>
+        <button class="tab-button" onclick="openTab('saude')">Planos de Saúde</button>
+        <button class="tab-button" onclick="openTab('contato')">Contatos</button>
+        <button class="tab-button" onclick="openTab('cliente')">Área Cliente</button>
+    </div>
+    <img id="tabImage" src="R.png" alt="Imagem da aba">
+
+    <div class="tab-content" id="home"
+        style="background: url('ceu-unsplash.jpg') no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; height: 100vh;">
+        <center>
+            <h1>Bem-vindo à Corretora de Seguros!</h1>
+            <p>Aqui você encontra as melhores opções de seguros para proteger o que é mais importante para você.</p>
+            <p>Há mais de uma década, temos o orgulho de ser uma corretora de seguros confiável e experiente,
+                proporcionando tranquilidade aos nossos clientes em cada jornada. Desde 2009, temos sido uma presença
+                constante no mercado segurador, colocando a segurança em primeiro lugar e construindo relações
+                duradouras.</p>
+            <h2>Nossa Experiência:</h2>
+            <p>Ao longo dos últimos 13 anos, acumulamos conhecimento valioso e expertise no setor de seguros. Entendemos
+                que cada cliente é único, e nossa equipe dedicada está aqui para oferecer soluções personalizadas que
+                atendam às suas necessidades específicas.</p>
+            <h2>Compromisso com a Excelência: </h2>
+            <p>Nosso compromisso com a excelência reflete-se em cada interação com nossos clientes. Trabalhamos com as
+                principais seguradoras do mercado, garantindo que você receba as melhores opções e benefícios.</p>
+            <h2>Cotação Descomplicada:</h2>
+            <p>Em um mundo acelerado, simplificamos o processo de obtenção de seguros. Nossa equipe especializada está
+                pronta para oferecer cotações rápidas e transparentes, proporcionando a você a segurança que merece.</p>
+            <h2>O Futuro da Proteção:</h2>
+            <p>Continuamos a inovar e nos adaptar às mudanças no mercado segurador. Estamos comprometidos em ser a sua
+                escolha número um para todas as suas necessidades de seguros, hoje e no futuro.</p>
+            <p>Junte-se a nós na jornada da tranquilidade e segurança. </p>
+        </center>
+    </div>
+
+    <div class="tab-content" id="auto"
+        style="background: url('car4-unsplash.jpg') no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; height: 100vh;">
+        <h2>Seguro Auto</h2>
+        <p>Proteja seu veículo com nossos planos de seguro auto.</p>
+        <p>Trabalhamos com todas as seguradoras do mercado.</p><br>
+        <input type="text" placeholder="Nome" id="nome_auto"><br>
+        <input type="number" placeholder="CPF" id="cpf_auto"><br>
+        <input type="number" placeholder="Número Carteira de motorista" id="carteira_auto"><br>
+        <input type="text" placeholder="CHASSIS" id="chassi_auto"><br>
+        <input type="text" placeholder="Placa" id="placa_auto"><br>
+        <input type="text" placeholder="Endereço" id="endereco_auto"><br>
+        <input type="number" placeholder="Cep" id="cep_auto"><br>
+        <input type="number" placeholder="Telefone" id="telefone_auto"><br>
+        <br> <button onclick="enviarDadosauto()">Enviar</button>
+
+    </div>
+
+    <div class="tab-content" id="casa"
+        style="background: url('residencial-unsplash.jpg') no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; height: 100vh;">
+        <h2>Seguro Residêncial</h2>
+        <p>Proteja sua residência com nossos planos de seguro residencial.</p>
+        <input type="text" placeholder="Nome" id="nome_casa"><br>
+        <input type="number" placeholder="CPF" id="cpf_casa"><br>
+        <input type="text" placeholder="Tipo de Moradia" id="moradia_casa" list="moradias">
+        <datalist id="moradias">
+            <option value="CASA">
+            <option value="APARTEMENTO">
+            <option value="CASA DE VERAMEIO">
+            <option value="CASA DE CAMPO"></option>
+        </datalist><br>
+        <input type="text" placeholder="Endereço" id="end_casa"><br>
+        <input type="number" placeholder="CEP" id="cep_casa"><br>
+        <input type="number" placeholder="Telefone" id="tel_casa"><br>
+        <input type="text" placeholder="E-mail" id="email_casa"><br>
+        <button onclick="enviarDadoscasa()">Enviar</button>
+
+    </div>
+
+    <div class="tab-content" id="life"
+        style="background: url('vida-unsplash.jpg') no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; height: 100vh;">
+        <h2>Seguro de Vida</h2>
+        <p>Proteja sua vida com nossos planos de seguro de vida.</p>
+        <p>Proteja o futuro de quem você mais ama.</p>
+        <input type="text" placeholder="Nome" id="nome_life"><br>
+        <input type="number" placeholder="CPF" id="cpf_life"><br>
+        <label for="data_life" style="display: block;"><strong>Data de Nascimento:</strong></label>
+        <input type="date" id="data_life"><br>
+        <input type="text" placeholder="Modalidade do seguro" id="modalidade_life" list="modalidades">
+        <datalist id="modalidades">
+            <option value="Morte natural">
+            <option value="Morte acidental">
+            <option value="Morte natural e acidental">
+            </option>
+        </datalist><br>
+        <input type="number" placeholder="Telefone" id="tel_life"><br>
+        <input type="text" placeholder="E-mail" id="mail_life"><br>
+        <button onclick="enviarDadoslife()">Enviar</button>
+
+    </div>
+    <div class="tab-content" id="saude"
+        style="background: url('medic-unsplash.jpg') no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; height: 100vh;">
+        <h1>Planos de Saúde</h1>
+        <p>
+        <h3>Insira seus dados nos campos para realizar uma cotação.</h3>
+        </p>
+
+        <div style="display: flex; justify-content: space-between;">
+            <div>
+                <label for="nome_saude">
+                    <h3>Seguro Saúde Individual</h3>
+                </label>
+                <input type="text" placeholder="Nome" id="nome_saude"><br>
+                <input type="number" placeholder="CPF" id="cpf_saude"><br>
+                <label for="data_saude" style="display: block;">Data de Nascimento:</label>
+                <input type="date" id="data_saude"><br>
+                <input type="number" placeholder="Telefone " id="fone_saude"><br>
+                <input type="text" placeholder="E-mail" id="email_saude"><br>
+                <br> <button onclick="enviarDadossaude()">Enviar</button>
+
+            </div>
+            <div>
+                <label for="cnpj_saude">
+                    <h3>Seguro Saúde Empresarial</h3>
+                </label><br>
+                <input type="text" placeholder="Razão Social" id="empresa_saude1"><br>
+                <input type="number" placeholder="CNPJ" id="cnpj_saude1"><br>
+                <input type="text" placeholder="Digite a cidade" id="cidade_saude1" list="cidades">
+                <datalist id="cidades">
+                    <option value="São Paulo">
+                    <option value="Rio de Janeiro">
+                    <option value="Belo Horizonte">
+                    <option value="Rio Grande do Sul">
+                    <option value="Bahia"></option>
+                </datalist><br>
+                <input type="number" placeholder="Quantidade de vidas no Plano" id="plano_saude1"><br>
+                <input type="number" placeholder="Telefone " id="fone_saude1"><br>
+                <input type="text" placeholder="E-mail" id="email_saude1"><br>
+                <button onclick="enviarDadossaude1()">Enviar</button>
+
+            </div>
+        </div>
+    </div>
+    <div class="tab-content" id="contato"
+        style="background: url('ceu1-unsplash.jpg') no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; height: 100vh;">
+        <center>
+            <h1>Contatos</h1>
+            <p class="contato">Corretor: Fábio Alexandre Deusdado.</p>
+            <p class="contato">SUSEP : 201075721 </p>
+            <p class="contato">Telefone: +55 11 99965-7379</p>
+            <p class="contato">E-mail: fabiodeusdado@gamail.com</p>
+            <div class="social-icons" onsubmit="event.preventDefault()">
+                <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/fabio.alexandre007" target="_blank"><i
+                        class="fab fa-instagram"></i></a>
+            </div>
+            <form id="contact_form">
+                <h2>Fale conosco </h2>
+                <input type="text" placeholder="Seu nome" id="nome_contato"><br>
+                <input type="email" placeholder="Seu e-mail" id="email_contato"><br>
+                <textarea placeholder="Sua mensagem" id="mensagem_contato"></textarea><br>
+                <button type="button" onclick="enviarEmail()">Enviar</button>
+            </form>
+        </center>
+    </div>
+    <div class="tab-content" id="cliente"
+        style="background: url('aaa.jpg') no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; height: 100vh;">
+        <center>
+            <h1>Área do Cliente</h1>
+            <p>
+            <h3>Acesse suas Apólices.</h3>
+            </p>
+            <form action="pagina_de_apolices.html" method="post" onsubmit="return validarFormulario();">
+                <strong><label for="cpf"> Usuário </label></strong><br>
+                <input type="number" placeholder="CPF" id="cpf" name="cpf"><br>
+                <strong><label for="pwd"> Senha </label></strong><br>
+                <input type="password" placeholder="Login" id="pwd" name="pwd"><br>
+                <input type="submit" value="Entrar">
+            </form>
+            <a href="pagina_de_recuperacao_de_senha.html">Esqueci minha senha</a><br><br>
+            <button onclick="mostrarCadastro()"> ***CADASTRO***</button>
+            <div id="cadastroForm">
+                <h2>Crie seu Usuário e Senha</h2>
+                <form onsubmit="event.preventDefault(); concluirCadastro();">
+                    <label for="nome"></label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo">
+                    <label for="cpf_cadastro"></label><br>
+                    <input type="number" id="cpf_cadastro" name="cpf_cadastro" placeholder="Digite seu CPF">
+                    <label for="pwd_cadastro"></label><br>
+                    <input type="password" id="pwd_cadastro" name="pwd_cadastro" placeholder="Crie uma senha"><br>
+                    <input type="submit" value="CONCLUIR">
+                </form>
+            </div>
+        </center>
+
+    </div>
+
+    </div>
+</body>
+
+</html>

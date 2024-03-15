@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(to top, #303030, #ffffff);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.colunas{
+    display: flex;
+    justify-content: space-around;
+}
+
+.coluna {
+    float: left;
+    padding-top: 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}

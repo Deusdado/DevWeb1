@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área do cliente</title>
+    <link rel="stylesheet" href="pag.css">
+
+
+</head>
+
+<body>
+    <center>
+        <h1>Detalhamento de Apólice</h1>
+        <h3>Nesta área você podera consultar suas apolices de seguros feitas com esta Corretora.</h3>
+    </center>
+    <div class="colunas">
+        <div class="coluna" id="apoliceForm">
+            <form id="seguro_auto_form">
+                <h2>Seguro de Auto</h2>
+                <label for="cpf_auto">Consultar Ápolice</label><br>
+                <input type="text" id="cpf_auto" name="cpf_auto" placeholder="Digite seu CPF"><br>
+                <br><input type="button" value="Consultar" onclick="consultar('auto')">
+            </form>
+
+            <form id="seguro_residencial_form">
+                <h2>Seguro Residêncial</h2>
+                <label for="cpf_residencial">Consultar Ápolice</label><br>
+                <input type="text" id="cpf_residencial" name="cpf_residencial" placeholder="Digite seu CPF"><br>
+                <br><input type="button" value="Consultar" onclick="consultar('residencial')">
+            </form>
+
+            <form id="seguro_life_form">
+                <h2>Seguro de Vida</h2>
+                <label for="cpf_residencial">Consultar Ápolice</label><br>
+                <input type="text" id="cpf_residencial" name="cpf_residencial" placeholder="Digite seu CPF"><br>
+                <br><input type="button" value="Consultar" onclick="consultar('residencial')">
+            </form>
+        </div>
+        <div class="coluna">
+            <form id="seguro_saude_form">
+                <h2>Seguro Saúde Individual</h2>
+                <label for="cpf_residencial">Consultar Ápolice</label><br>
+                <input type="text" id="cpf_residencial" name="cpf_residencial" placeholder="Digite seu CPF"><br>
+                <br><input type="button" value="Consultar" onclick="consultar('residencial')">
+            </form>
+
+            <form id="cnpj_saude">
+                <h2>Seguro Saúde Empresarial</h2>
+                <label for="cpf_residencial">Consultar Ápolice</label><br>
+                <input type="text" id="cpf_residencial" name="cnpj_residencial" placeholder="Digite o CNPJ"><br>
+                <br><input type="button" value="Consultar" onclick="consultar('residencial')">
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
