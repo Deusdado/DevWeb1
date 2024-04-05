@@ -74,10 +74,18 @@ textarea {
 }
 
 a {
-    color: #060606; /* Substitua #FF0000 pela cor desejada em formato hexadecimal, RGB ou nome da cor */
+    color: #060606;
+    text-decoration: none; /* Substitua #FF0000 pela cor desejada em formato hexadecimal, RGB ou nome da cor */
     /*text-decoration: none; /* Remove o sublinhado padrão dos links */
 }
 
 a:hover {
     color: #ff00ff; /* Cor quando o mouse está sobre o link - substitua conforme necessário */
+}
+
+.botaoentra{
+    background: rgb(236, 234, 230);
+    padding: 2px 40px;
+    font-size: 15pt;
+
 }
